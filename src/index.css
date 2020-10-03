@@ -1,13 +1,67 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  margin: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas,
+    "Courier New", monospace;
+}
+
+button {
+  width: 80px;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 0.6rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e3e3e3;
+  padding: 0.5rem 2rem 2rem;
+  width: 100%;
+}
+
+label {
+  padding-bottom: 0.8rem;
+}
+
+table {
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #e3e3e3;
+  padding: 0.4rem;
+}
+
+input {
+  border: 1px solid #3e3e3e;
+  border-radius: 0.4rem;
+  margin: 0.2rem;
+  padding: 0.2rem 0.4rem;
+}
+
+a,
+a:visited {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+svg {
+  padding-right: 0.5rem;
+  fill: red;
+  cursor: pointer;
 }
