@@ -19,6 +19,7 @@ function App() {
         </div>
         <Route path="/product/:id" component={ProductPage} />
       </div>
+      <ReactQueryDevtools />
     </BrowserRouter>
   )
 }

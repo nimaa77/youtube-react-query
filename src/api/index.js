@@ -9,7 +9,7 @@ const getAllProducts = async () => {
   return data
 }
 
-const getProduct = async (id) => {
+const getProduct = async (_, id) => {
   const { data } = await client.get(`/products/${id}`)
   return data
 }

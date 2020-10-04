@@ -1,36 +1,31 @@
-import React from "react"
 import * as api from "../api"
+import { useQuery, useMutation, queryCache } from "react-query"
 
 const useAllProducts = () => {
-  const [data, setData] = React.useState(null)
-  const [isLoading, setIsLoading] = React.useState(true)
-
-  return { data, isLoading }
+  return useQuery("products", api.getAllProducts)
 }
 
 const useProduct = (id) => {
-  const [data, setData] = React.useState(null)
-  const [isLoading, setIsLoading] = React.useState(true)
-
-  return { data, isLoading }
+  return useQuery(["product", id], api.getProduct)
 }
 
 const useDelteProduct = () => {
-  const [data, setData] = React.useState(null)
-  const [isLoading, setIsLoading] = React.useState(false)
-
-  const fetch = (id) => {}
-
-  return [fetch, { data, isLoading }]
+  return useMutation(api.deleteProdcut, {
+    onSuccess: (_, id) => {
+      const products = queryCache.getQueryData("products")
+      const data = products.filter((item) => item._id !== id)
+      queryCache.setQueryData("products", data)
+    },
+  })
 }
 
 const useUpdateProduct = () => {
-  const [data, setData] = React.useState(null)
-  const [isLoading, setIsLoading] = React.useState(false)
-
-  const fetch = (formData) => {}
-
-  return [fetch, { data, isLoading }]
+  return useMutation(api.updateProdcut, {
+    onSuccess: (_, { id, ...variables }) => {
+      queryCache.refetchQueries("products")
+      queryCache.refetchQueries(["product", id])
+    },
+  })
 }
 
 export {
