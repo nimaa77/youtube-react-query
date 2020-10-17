@@ -9,8 +9,8 @@ const useProduct = (id) => {
   return useQuery(["product", id], api.getProduct)
 }
 
-const useDelteProduct = () => {
-  return useMutation(api.deleteProdcut, {
+const useDeleteProduct = () => {
+  return useMutation(api.deleteProduct, {
     onSuccess: (_, id) => {
       const products = queryCache.getQueryData("products")
       const data = products.filter((item) => item._id !== id)
@@ -20,7 +20,7 @@ const useDelteProduct = () => {
 }
 
 const useUpdateProduct = () => {
-  return useMutation(api.updateProdcut, {
+  return useMutation(api.updateProduct, {
     onSuccess: (_, { id, ...variables }) => {
       queryCache.refetchQueries("products")
       queryCache.refetchQueries(["product", id])
@@ -30,7 +30,7 @@ const useUpdateProduct = () => {
 
 export {
   useAllProducts,
-  useDelteProduct,
+  useDeleteProduct,
   useProduct,
   useUpdateProduct,
 }

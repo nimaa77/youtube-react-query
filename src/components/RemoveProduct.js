@@ -1,9 +1,9 @@
 import React from "react"
 import { ReactComponent as Remove } from "../svg/remove.svg"
-import { useDelteProduct } from "../hooks"
+import { useDeleteProduct } from "../hooks"
 
 const RemoveProduct = ({ id }) => {
-  const [remove] = useDelteProduct()
+  const [remove] = useDeleteProduct()
   return (
     <Remove
       width="15px"
