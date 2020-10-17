@@ -1,8 +1,8 @@
-### React Query
+### React Context
 
 this repo is related to a video that uploaded to my channel at youtube
 
-video link: https://youtu.be/cwf7lrHxdDU
+video link: https://youtu.be/bhn-4qZewak
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -48,4 +48,8 @@ There is no need to set any Enviroment Variables
 
 ### Backend Server
 
-there is no backend servers for this project
+for backend I used this repo:
+
+https://github.com/vitorverasm/node-crud-rest
+
+> just run the backend server on port 3002 by running port=3002 npm run dev
