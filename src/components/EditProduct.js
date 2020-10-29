@@ -11,7 +11,7 @@ const EditProduct = ({ id, name, amount, description }) => {
 
   return (
     <form method="post" onSubmit={getFormValues(onSubmit)}>
-      <h3>Edit Prodcut</h3>
+      <h3>Edit Product</h3>
       <label>
         Name:
         <input name="name" defaultValue={name} />

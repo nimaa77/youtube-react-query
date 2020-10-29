@@ -20,12 +20,12 @@ const createProduct = async ({ name, description, amount }) => {
   return data
 }
 
-const updateProdcut = async ({ id, ...product }) => {
+const updateProduct = async ({ id, ...product }) => {
   const { data } = await client.put(`/products/${id}`, product)
   return data
 }
 
-const deleteProdcut = async (id) => {
+const deleteProduct = async (id) => {
   const { data } = await client.delete(`/products/${id}`)
   return data
 }
@@ -34,6 +34,6 @@ export {
   getAllProducts,
   getProduct,
   createProduct,
-  updateProdcut,
-  deleteProdcut,
+  updateProduct,
+  deleteProduct,
 }

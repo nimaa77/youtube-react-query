@@ -1,4 +1,4 @@
-// dumy way to handle the form
+// dummy way to handle the form
 // DON'T try this at Home, School or anywhere
 const getFormValues = (callBack) => (event) => {
   event.preventDefault();
